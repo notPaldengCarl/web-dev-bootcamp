@@ -6,4 +6,4 @@
 
 // Camel Cassing
 
-var myNameVariable = "joshuaDierickse"
+var myNameVariable = "Carl"
