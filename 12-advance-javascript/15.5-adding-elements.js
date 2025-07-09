@@ -1,5 +1,4 @@
-var guestList= ["Angela","Jack","Pam","James","Lara","Jason"];
-
+const guestList = ["Angela", "Jack", "Pam", "James", "Lara", "Jason"];
 const readline = require('readline');
 
 const rl = readline.createInterface({
@@ -7,11 +6,19 @@ const rl = readline.createInterface({
   output: process.stdout
 });
 
-rl.question("What is your name? ", function (newGuest){
-var guestList= ["Angela","Jack","Pam","James","Lara","Jason"];
-    guestList.push(newGuest);
-  console.log("You have been added to the guest list!");
-  console.log("Updated Guest List:");
-  console.log(guestList);
-    rl.close()
-});
+function askName() {
+  rl.question("Enter a name to add (or type 'done' to finish): ", function(newGuest) {
+    if (newGuest.toLowerCase() === 'done') {
+      console.log("Final guest list:");
+      console.log(guestList);
+      rl.close();
+    } else {
+      guestList.push(newGuest);
+      console.log(newGuest + " has been added.");
+      console.log("Current guest list:", guestList);
+      askName(); // 🔁 ask again
+    }
+  });
+}
+
+askName(); // 🔁 Start the loop
