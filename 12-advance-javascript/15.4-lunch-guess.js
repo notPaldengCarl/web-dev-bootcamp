@@ -1,19 +1,16 @@
-var guestList= ["Angela","Jack","Pam","James","Lara","Jason"];
-
 const readline = require('readline');
 
+const guestList = ["Angela", "Jack", "Pam", "James", "Lara", "Jason"];
+
+function pickRandomName(array) {
+  const index = Math.floor(Math.random() * array.length);
+  return array[index];
+}
 const rl = readline.createInterface({
   input: process.stdin,
   output: process.stdout
 });
 
-rl.question("What is your name? ", function (newGuest){
-var guestList= ["Angela","Jack","Pam","James","Lara","Jason"];
-
-    if (guestList.includes(newGuest)){
-        console.log("Welcome!");
-    } else{
-        console.log("Sorry, not allowed!");
-    }
-    rl.close()
-});
+    const randomGuest = pickRandomName(guestList);
+    console.log("The randomly selected guest is: " + randomGuest);
+  rl.close();
