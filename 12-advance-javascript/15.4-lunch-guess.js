@@ -6,6 +6,7 @@ function pickRandomName(array) {
   const index = Math.floor(Math.random() * array.length);
   return array[index];
 }
+
 const rl = readline.createInterface({
   input: process.stdin,
   output: process.stdout
