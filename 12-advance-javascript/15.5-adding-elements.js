@@ -16,9 +16,9 @@ function askName() {
       guestList.push(newGuest);
       console.log(newGuest + " has been added.");
       console.log("Current guest list:", guestList);
-      askName(); // 🔁 ask again
+      askName();
     }
   });
 }
 
-askName(); // 🔁 Start the loop
+askName(); 

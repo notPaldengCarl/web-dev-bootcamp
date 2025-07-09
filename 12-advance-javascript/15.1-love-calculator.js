@@ -16,10 +16,10 @@ rl.question("What is your name? ", function(name1) {
   console.log("Your love score is " + lovescore + "%" + " like I love you!");
   }
   if (lovescore >= 30 && lovescore <= 70){
-  console.log("Your love score is " + lovescore + "%" + " like it's too low");  
+  console.log("Your love score is " + lovescore + "%" + " maybe there's a chance.");  
   }
   if (lovescore <= 30){
-  console.log("Your love score is " + lovescore + "%" + " like it's too low");  
+  console.log("Your love score is " + lovescore + "%" + " like it's too low.");  
   }
   rl.close();
     });
